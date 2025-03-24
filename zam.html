@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zamboanga City Tourist Spots</title>
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background-color: #4CAF50; /* Green header */
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  margin: 0;
+}
+.head{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 60px; /* Adjust height as needed */
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2em;
+  margin-left: auto; /* Push to the right */
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.nav-links li {
+  display: inline;
+  margin: 0 10px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white; /* White links */
+}
+/* ...rest of CSS remains the same... */
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    text-align: left;
+  }
+  .nav-links.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50; /* Match header color */
+    padding: 10px;
+  }
+p {
+  text-align: center;
+  font-weight:bold;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head">
+    <h1>Zamboanga City</h1>
+  
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <ul class="nav-links">
+    <li><a href="#introduction" onclick="scrollToSection('introduction')">Introduction</a></li>
+    <li><a href="#spots" onclick="scrollToSection('spots')">Tourist Spots</a></li>
+    <li><a href="#about" onclick="scrollToSection('about')">Cultures</a></li>
+    <li><a href="#contact" onclick="scrollToSection('contact')">Foods</a></li>
+  </ul>
+</header>
+
+<section id="introduction">
+  <h2>Introduction</h2>
+  <p>Zamboanga City, a vibrant coastal metropolis in the Philippines, is renowned for its captivating blend of natural beauty and rich cultural heritage.  Nestled on the Zamboanga Peninsula, it boasts stunning beaches with the iconic pink sand of Sta. Cruz Island, a testament to its unique marine ecosystem.  The city's history is a fascinating tapestry woven from indigenous Subano traditions, Malay influences, and the legacies of Spanish and American colonization. This confluence of cultures is reflected in its architecture, cuisine, and the diverse lifestyles of its people.  Beyond its natural wonders, Zamboanga City offers a glimpse into a dynamic society where ancient traditions coexist with modern progress, making it a truly unforgettable destination.  Visitors can explore historical landmarks like Fort Pilar, stroll along the picturesque Paseo del Mar, and immerse themselves in the lively atmosphere of the city's bustling markets.</p>
+  <video width="380" length="90" controls>
+      <source src="EDIT.mp4" type="video/mp4">
+      </video>
+</section>
+
+<section id="spots">
+  <h2>Tourist Spots</h2>
+  <div class="container">
+    <!-- Your tourist spot divs here -->
+  
+    <!DOCTYPE html>
+<html>
+<head>
+<title>Zamboanga City Tourist Spots</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.spot {
+  width: 30%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.spot img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.spot img:hover {
+  transform: scale(1.1);
+}
+.info-box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 1;
+}
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="spot">
+    <img src="fort.jpg" alt="Fort Pilar" onclick="showInfo(this, 'FortPilarInfo')">
+    <div class="info-box" id="FortPilarInfo">
+      <span class="close-button" onclick="hideInfo('FortPilarInfo')">&times;</span>
+      <h3>Fort Pilar</h3>
+      <p>Fort pilar is the number one historical landmark in zamboanga city. It was built by the Spaniards as a defense fortress during the Spaniards colonization.</p>
+    </div>
+  </div>
+  <div class="spot">
+    <img src="paseo.jpg" alt="Paseo Del Mar" onclick="showInfo(this, 'PaseoDelMarInfo')">
+    <div class="info-box" id="PaseoDelMarInfo">
+      <span class="close-button" onclick="hideInfo('PaseoDelMarInfo')">&times;</span>
+      <h3>Paseo Del Mar</h3>
+      <p>One of the most stunning parks in the country in Zamboanga City is Paseo Del Mar. One may see the most breathtaking sunsets in the city as well as a breathtaking view of Basilan Island and Santa Cruz here. From Paseo del Mar, one could also observe the city's active port.</p>
+    </div>
+  </div>
+  <div class="spot">
+    <img src="hall.jpg" alt="Zamboanga City Hall" onclick="showInfo(this, 'CityHallInfo')">
+    <div class="info-box" id="CityHallInfo">
+      <span class="close-button" onclick="hideInfo('CityHallInfo')">&times;</span>
+      <h3>Zamboanga City Hall</h3>
+      <p>The Zamboanga City Hall is the seat of the local government of Zamboanga City. The National Historical Commission of the Philippines considers the city hall building as a National Historical Site.</p>
+    </div>
+  </div>
+  <div class="spot">
+    <img src="sta.jpg" alt="Sta. Cruz Island" onclick="showInfo(this, 'StaCruzInfo')">
+    <div class="info-box" id="StaCruzInfo">
+      <span class="close-button" onclick="hideInfo('StaCruzInfo')">&times;</span>
+      <h3>Sta. Cruz Island</h3>
+      <p>Great Santa Cruz Island is a small inhabited island in Zamboanga City in the southern region of the Philippines that is famous for its pink coralline sand.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+function showInfo(img, infoId) {
+  // Hide other info boxes before showing the new one
+  let infoBoxes = document.querySelectorAll('.info-box');
+  infoBoxes.forEach(box => box.style.display = 'none');
+  document.getElementById(infoId).style.display = "block";
+}
+
+function hideInfo(infoId) {
+  document.getElementById(infoId).style.display = "none";
+}
+</script>
+
+</body>
+</html>
+->
+  </div>
+</section>
+
+<section id="about">
+  <h2>Culture</h2>
+    <video width="380" length="90" controls>
+      <source src="TRADITIONS.mp4" type="video/mp4">
+      </video>
+  <p>
+  The Zamboanga Hermosa Festival, also known as Fiesta Pilar, is a month-long, annual cultural and religious festival held in Zamboanga City, Philippines, in honor of the city's patron saint, Nuestra Señora de la Virgen del Pilar, with the main feast day on October 12. 
+Here's a more detailed look at the festival</p>
+
+ <img src="ZAM HERMOSA.jpg" width="380" height="90" >
+ <h2> Costumes Represent</h2>
+ </p> During the Zamboanga Hermosa Festival, costumes reflect the city's Hispanic influence, culture, and traditions, with participants having creative freedom to depict these aspects through their attire. </p>
+ 
+</section>
+
+<section id="contact">
+  <h2>Famous Food</h2>
+  <p>Curacha, an unusual crab that is found in the waters of Sulu and Zamboanga. A lot of things make it unique – from its shape, its orange color (that stays the same raw and cooked), its flavor and the famous Alavar sauce that the crabs are often cooked in.</p>
+   <img src="CRAB.jpg" width="380" height="90" >
+   <h2>Zamboanga Hermosa Hymn</h2>
+   <video width="380" length="90" controls>
+      <source src="ZAMHermosa.mp4" type="video/mp4">
+      </video>
+   <p>The "Zamboanga Hermosa Hymn" is a local hymn about Zamboanga, written by Vicente M. Orendain in the early 20th century, and is known for its praise of the city and its Chavacano language. </p>
+</section>
+ <p>&copy; Jessa Tinguha</p>
+
+<script>
+// ... (Your JavaScript functions remain the same) ...
+</script>
+
+</body>
+</html>
